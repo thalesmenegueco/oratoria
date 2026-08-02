@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
-import { ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X, PenLine } from 'lucide-react';
 import type { SpeechBlock } from '../types/database';
 
 interface PresentModeProps {
@@ -147,15 +147,15 @@ export default function PresentMode({ title, blocks, speechId }: PresentModeProp
                         {formatTime(timeElapsed)}
                     </button>
 
-                    {/* Exit Button */}
+                    {/* Edit Button */}
                     {speechId && (
                         <button
                             onClick={() => router.push(`/dashboard/edit/${speechId}`)}
-                            className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 
+                            className="w-10 h-10 rounded-full bg-white/10 p-1 hover:bg-white/20 
                                 transition-all duration-200 flex items-center justify-center"
-                            aria-label="Sair do modo apresentação"
+                            aria-label="Editar discurso"
                         >
-                            <X className="w-5 h-5 text-[#b7c1de]" />
+                            <PenLine className="w-4 h-4 text-[#929ab1]" />
                         </button>
                     )}
                 </div>

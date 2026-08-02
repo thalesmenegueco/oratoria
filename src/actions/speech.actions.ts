@@ -32,6 +32,14 @@ export async function createSpeechAction() {
     redirect(`/dashboard/edit/${newSpeech.id}`);
 }
 
+export async function deleteSpeechAction(id: string) {
+    const supabase = createClient(await cookies());
+    await SpeechService.delete(supabase, id);
+    revalidatePath('/dashboard');
+    revalidatePath(`/present/${id}`);
+    revalidatePath(`/dashboard/edit/${id}`);
+}
+
 export async function updateSpeechAction(id: string, payload: UpdateSpeechDTO) {
     try {
         const supabase = createClient(await cookies());

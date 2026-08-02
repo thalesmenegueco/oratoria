@@ -83,15 +83,15 @@ export default function LoginPage() {
                             {loading ? 'A entrar...' : 'Entrar'}
                         </button>
                     </form>
-
-                    <div className="mt-6 text-center">
+                    
+                    {/*<div className="mt-6 text-center">
                         <p className="text-[#b7c1de] text-sm">
                             Não tem conta?{' '}
                             <Link href="/signup" className="text-[#ac61b9] hover:underline font-semibold">
                                 Criar conta
                             </Link>
                         </p>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>

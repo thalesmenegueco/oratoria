@@ -17,6 +17,9 @@ const atkinson = Atkinson_Hyperlegible({
 export const metadata: Metadata = {
   title: 'Oratoria',
   description: 'A sua ferramenta pessoal para discursos impecáveis.',
+  icons: {
+    icon: '/favicon.ico', // path relative to public/
+  },
 };
 
 export default function RootLayout({

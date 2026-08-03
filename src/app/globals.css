@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-atkinson: var(--font-atkinson), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+}
